@@ -1,0 +1,38 @@
+[project]
+name = "toutiao-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "aiomysql>=0.3.2",
+  "bcrypt>=5.0.0",
+  "fastapi[standard]>=0.136.1",
+  "passlib[bcrypt]>=1.7.4",
+  "redis>=7.4.0",
+  "setuptools>=82.0.1",
+  "sqlalchemy[asyncio]>=2.0.0",
+  "uvicorn>=0.46.0",
+]
+
+[dependency-groups]
+dev = [
+  "aiosqlite>=0.22.1",
+  "black>=24.0.0",
+  "httpx>=0.28.1",
+  "mypy>=1.0.0",
+  "pytest>=9.0.3",
+  "pytest-asyncio>=1.3.0",
+  "types-passlib>=1.7.7.20260211",
+]
+
+[tool.uv]
+index-url = "https://mirrors.aliyun.com/pypi/simple/"
+
+[tool.pytest]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+
+[tool.mypy]
+explicit_package_bases = true
