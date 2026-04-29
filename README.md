@@ -404,7 +404,7 @@ graph LR
 ```bash
 # 安装所有依赖（主依赖 + 开发依赖）
 uv sync --all-groups
-```
+
 # 运行测试 🧪（自动使用测试环境配置）
 uv run pytest
 
